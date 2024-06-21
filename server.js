@@ -6,6 +6,8 @@ const app=express();
 const moongoose=require('mongoose');
 const {MONGOBD_URL}=require('./config');
 
+moongoose.set('strictQuery', false);
+
 // Building connections
 moongoose.connect(MONGOBD_URL);
 
