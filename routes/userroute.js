@@ -71,6 +71,9 @@ router.post('/API/forgot',(req,res)=>{
             return res.status(401).json({ error: "Inncorrect Password" })
         }
     })
+    .catch((error)=>{
+        res.status(401).json({result:"Provide correct data"})
+    })
 })
 
 module.exports = router;
